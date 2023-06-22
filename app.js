@@ -593,9 +593,9 @@ function onTouchStart(event){
 
 function onTouchMove(event){
     if (isPainting) {
+        drawCtx.beginPath();
         drawCtx.lineTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop);
         drawCtx.stroke();
-        return;
     }
     drawCtx.beginPath();
     drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop);    

@@ -1,5 +1,6 @@
 const root = document.documentElement;
 const rootStyle = getComputedStyle(root);
+const header = document.querySelector(".header");
 
 const lineWidth = document.getElementById("line-width");
 const lineWidthText = document.getElementById("line-width-text");
@@ -586,18 +587,16 @@ function onClickTabInTabEtc() {
 function onTouchStart(event){
     isPainting = true;
     document.body.className = "stop-scrolling";
-    console.log(event.touches[0].pageX );
-    console.log(event.touches[0].pageY - document.body.scrollTop);
 }
 
 
 function onTouchMove(event){
     if (isPainting) {
-        drawCtx.lineTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop);
+        drawCtx.lineTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop+header.style.height);
         drawCtx.stroke();
     }
     drawCtx.beginPath();
-    drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop);    
+    drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop+header.style.height);    
 }
 
 function TouchEnd(){

@@ -592,11 +592,11 @@ function onTouchStart(event){
 
 function onTouchMove(event){
     if (isPainting) {
-        drawCtx.lineTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop+header.style.height);
+        drawCtx.lineTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop - header.style.height);
         drawCtx.stroke();
     }
     drawCtx.beginPath();
-    drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop+header.style.height);    
+    drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY - document.body.scrollTop - header.style.height);    
 }
 
 function TouchEnd(){

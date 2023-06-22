@@ -202,8 +202,8 @@ function onDownloadBtnClick(event) {
     underCtx.drawImage(teamCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     underCtx.drawImage(uniformCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     underCtx.drawImage(batCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    underCtx.drawImage(capCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     underCtx.drawImage(accCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    underCtx.drawImage(capCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     underCtx.drawImage(drawCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     underCtx.drawImage(textCanvas, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 

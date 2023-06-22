@@ -553,3 +553,8 @@ a {
  #tab-in-tab-etc {
     display: none;
  }
+
+ .stop-scrolling{
+    height:100%;
+    overflow: hidden;
+ }

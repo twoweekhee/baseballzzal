@@ -293,16 +293,16 @@ function onClickUniform(event) {
     event.preventDefault();
     uniformCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     for (let i = 0; i < 10; i++) {
-        if ((event.target.value === uniforms[i])&&(event.target.className == "wear-btn")) {
-                uniformCtx.drawImage(imgArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-                event.target.className = "wear-clicked-btn";
-            } 
-        else if ((event.target.value === uniforms[i])&&(event.target.className == "wear-clicked-btn")){
-                uniformCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);    
-                event.target.className = "wear-btn";
-            }
+        if ((event.target.value === uniforms[i]) && (event.target.className == "wear-btn")) {
+            uniformCtx.drawImage(imgArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            event.target.className = "wear-clicked-btn";
+        }
+        else if ((event.target.value === uniforms[i]) && (event.target.className == "wear-clicked-btn")) {
+            uniformCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            event.target.className = "wear-btn";
         }
     }
+}
 
 
 const capArray = new Array();
@@ -317,18 +317,18 @@ for (let i = 0; i < 8; i++) {
 
 function onClickCap(event) {
     event.preventDefault();
-    capCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);  
+    capCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     for (let i = 0; i < 10; i++) {
-        if ((event.target.value === caps[i])&&(event.target.className == "cap-btn")) {
-                capCtx.drawImage(capArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-                event.target.className = "cap-clicked-btn";
-            } 
-        else if ((event.target.value === caps[i])&&(event.target.className == "cap-clicked-btn")){
-                capCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);   
-                event.target.className = "cap-btn";
-            }
+        if ((event.target.value === caps[i]) && (event.target.className == "cap-btn")) {
+            capCtx.drawImage(capArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            event.target.className = "cap-clicked-btn";
+        }
+        else if ((event.target.value === caps[i]) && (event.target.className == "cap-clicked-btn")) {
+            capCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            event.target.className = "cap-btn";
         }
     }
+}
 
 
 const batArray = new Array();
@@ -344,20 +344,20 @@ for (let i = 0; i < 10; i++) {
 
 function onClickBat(event) {
     event.preventDefault();
-    batCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);   
+    batCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     for (let i = 0; i < 10; i++) {
-        if ((event.target.value === bats[i])&&(event.target.className == "bat-btn")) {
-                batCtx.drawImage(batArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-                event.target.className = "bat-clicked-btn";
-            } 
-        else if ((event.target.value === bats[i])&&(event.target.className == "bat-clicked-btn")){
-                batCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);    
-                for (let j = 0; j < 10; j++) {
+        if ((event.target.value === bats[i]) && (event.target.className == "bat-btn")) {
+            batCtx.drawImage(batArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            event.target.className = "bat-clicked-btn";
+        }
+        else if ((event.target.value === bats[i]) && (event.target.className == "bat-clicked-btn")) {
+            batCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            for (let j = 0; j < 10; j++) {
                 event.target.className = "bat-btn";
-                }
             }
         }
     }
+}
 
 
 
@@ -365,7 +365,7 @@ const accArray = new Array();
 const accs = ["acc-doosan", "acc-hanwha", "acc-kia", "acc-kiwoom",
     "acc-kt", "acc-lg", "acc-lotte", "acc-nc", "acc-samsung", "acc-ssg"]
 
-const accId = ['acc-DB',"acc-HE","acc-KT","acc-KH","acc-KW","acc-LT","acc-LG","acc-ND","acc-SL","acc-SD"]
+const accId = ['acc-DB', "acc-HE", "acc-KT", "acc-KH", "acc-KW", "acc-LT", "acc-LG", "acc-ND", "acc-SL", "acc-SD"]
 
 for (let i = 0; i < 10; i++) {
     accArray[i] = new Image();
@@ -377,18 +377,18 @@ for (let i = 0; i < 10; i++) {
 function onClickAcc(event) {
     for (let i = 0; i < 10; i++) {
         if ((event.target.value == accs[i]) && (event.target.className == "acc-btn")) {
-                accCtx.drawImage(accArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-                event.target.className = "acc-clicked-btn";
-            }
-        else if((event.target.value == accs[i]) && (event.target.className == "acc-clicked-btn")){
+            accCtx.drawImage(accArray[i], 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            event.target.className = "acc-clicked-btn";
+        }
+        else if ((event.target.value == accs[i]) && (event.target.className == "acc-clicked-btn")) {
             accCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
             for (let j = 0; j < 10; j++) {
-                document.getElementById(accId[j]).className="acc-btn";
+                document.getElementById(accId[j]).className = "acc-btn";
             }
         }
-        }
-        }
-        
+    }
+}
+
 
 
 function onFileChange(event) {
@@ -554,52 +554,68 @@ function onClickTextTab() {
 function onClickTabInTabBat() {
     if (tabInTabBatUI.style.display === "" || tabInTabBatUI.style.display === "none") {
         tabInTabEtcUI.style.display = "none";
+        tabInTabEtc.style.backgroundColor = "white";
         tabInTabCapUI.style.display = "none";
+        tabInTabCap.style.backgroundColor = "white";
+
         tabInTabBatUI.style.display = "flex";
+        tabInTabBat.style.setProperty("background-color", rootStyle.getPropertyValue("--theme-color-d"));
+
     } else {
         tabInTabBatUI.style.display = "none";
+        tabInTabBat.style.backgroundColor = "white";
     }
 }
 
 function onClickTabInTabCap() {
     if (tabInTabCapUI.style.display === "" || tabInTabCapUI.style.display === "none") {
         tabInTabEtcUI.style.display = "none";
+        tabInTabEtc.style.backgroundColor = "white";
         tabInTabBatUI.style.display = "none";
+        tabInTabBat.style.backgroundColor = "white";
+
         tabInTabCapUI.style.display = "flex";
+        tabInTabCap.style.setProperty("background-color", rootStyle.getPropertyValue("--theme-color-d"));
     } else {
         tabInTabCapUI.style.display = "none";
+        tabInTabCap.style.backgroundColor = "white";
     }
 }
 
 function onClickTabInTabEtc() {
     if (tabInTabEtcUI.style.display === "" || tabInTabEtcUI.style.display === "none") {
         tabInTabBatUI.style.display = "none";
+        tabInTabBat.style.backgroundColor = "white";
         tabInTabCapUI.style.display = "none";
+        tabInTabCap.style.backgroundColor = "white";
+
         tabInTabEtcUI.style.display = "flex";
+        tabInTabEtc.style.setProperty("background-color", rootStyle.getPropertyValue("--theme-color-d"));
     } else {
         tabInTabEtcUI.style.display = "none";
+        tabInTabEtc.style.backgroundColor = "white";
     }
 }
 
 /* 모바일 함수 */
 
 
-function onTouchStart(event){
+function onTouchStart(event) {
     isPainting = true;
     document.body.className = "stop-scrolling";
 }
 
 
-function onTouchMove(event){
+function onTouchMove(event) {
     if (isPainting) {
         drawCtx.lineTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY + document.body.scrollTop + header.style.height);
         drawCtx.stroke();
     }
     drawCtx.beginPath();
-    drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY + document.body.scrollTop + header.style.height);    
+    drawCtx.moveTo(event.touches[0].pageX - document.body.scrollLeft, event.touches[0].pageY + document.body.scrollTop + header.style.height);
 }
 
-function TouchEnd(){
+function TouchEnd() {
     isPainting = false;
     document.body.className = "";
 }

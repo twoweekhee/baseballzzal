@@ -100,14 +100,22 @@ a {
     z-index: 4;
     top:0;
 }
-#draw-canvas {
+
+#cap-canvas{
     position: absolute;
     z-index: 5;
     top:0;
 }
-#text-canvas {
+
+#draw-canvas {
     position: absolute;
     z-index: 6;
+    top:0;
+}
+
+#text-canvas {
+    position: absolute;
+    z-index: 7;
     top:0;
 }
 

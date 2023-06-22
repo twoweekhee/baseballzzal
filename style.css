@@ -15,6 +15,13 @@
     --theme-color-f: #a28bff;
  
 }
+@font-face {
+    font-family: 'KBO-Dia-Gothic_bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 body {
     background-color: white;
@@ -42,7 +49,7 @@ a {
     margin-top: 2rem;
     font-size: xx-large;
     font-weight: bold;
-    font-family: var(--main-font);
+    font-family: 'KBO-Dia-Gothic_bold';
     cursor: pointer;
     text-decoration: none;
     color: black;

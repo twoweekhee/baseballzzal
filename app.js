@@ -33,8 +33,8 @@ const teamCtx = teamCanvas.getContext("2d");
 const underCtx = underCanvas.getContext("2d");
 
 
-const CANVAS_WIDTH = 400;
-const CANVAS_HEIGHT = 400;
+const CANVAS_WIDTH = 800;
+const CANVAS_HEIGHT = 800;
 
 const backgroundTab = document.getElementById("background-tab");
 const teamTab = document.getElementById("team-tab");
